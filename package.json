@@ -10,8 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.0",
+    "foundation-apps": "^1.2.0",
     "gulp": "^3.9.1",
     "gulp-jshint": "^2.0.0",
+    "gulp-watch": "^4.3.5",
     "jshint": "^2.9.1"
   },
   "devDependencies": {

@@ -10,3 +10,7 @@ gulp.task('concat', function() {
     .pipe(concat('all.js'))
     .pipe(gulp.dest('./dist/'));
 });
+
+gulp.task('watch', function () {
+   gulp.watch('./app/js/*.js', ['concat']);
+});
