@@ -1,0 +1,19 @@
+<div class="grid-block">
+	<div class="medium-3">
+		Search:<input ng-model="query">
+		Sort by:
+		<select ng-model="orderProp">
+		  <option value="">Defoult</option>
+		  <option value="name">Alphabetical</option>
+		  <option value="age">Newest</option>
+		</select>
+	</div>
+	<div class="medium-9">
+	  <ul>
+	  	<li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+	  		<a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+	  		<p>{{phone.snippet}}</p>
+	  	</li>
+	  </ul>
+	</div>
+</div>
