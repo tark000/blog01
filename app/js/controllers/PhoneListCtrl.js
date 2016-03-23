@@ -1,5 +1,7 @@
-blogApp.controller('PhoneListCtrl',['$scope','$http',
-	function($scope,$http){
+blogApp.controller('PhoneListCtrl',['$scope','$http','postService',
+	function($scope,$http,postService){
+		console.log(postService);
+		$scope.postService = postService;
 		$scope.phones = [
 		    {
 			  "age": 13,
@@ -27,9 +29,9 @@ blogApp.controller('PhoneListCtrl',['$scope','$http',
 			 }
 		  ];
 
-		  // $http.get('app/js/data/phones.json').success(function(data){
-		  // 	$scope.phones = data;
-		  // });
+		  $http.get('app/js/data/phones.json').success(function(data){
+		  	$scope.phones = data;
+		  });
 
 		$scope.orderProp = 'age';
 		console.log("test");
